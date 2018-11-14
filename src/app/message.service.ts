@@ -4,6 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MessageService {
+  messages: string[] = [];
 
-  constructor() { }
+  // TODO: why constructor was deleted
+
+  add(message: string) {
+    this.messages.push(message);
+  }
+ 
+  clear() {
+    this.messages = [];
+  }
 }
